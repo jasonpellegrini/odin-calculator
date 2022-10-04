@@ -1,0 +1,6 @@
+once operator is hit
+join array
+make new array for next set of numbers
+combine them into new array
+if array contains (operator)
+put operator at beginning and pass as parameters

@@ -4,6 +4,7 @@ let secondArr;
 let counter = 0;
 let operatorStorage;
 let newArr = [];
+const display = document.querySelector('#displayNum');
 
 const add = function(arr) {
     let num1 = arr[0];
@@ -60,16 +61,19 @@ const operate = function(operator, x, y){
         answer = divide(arr);
     }
     counter++;
+    firstArr = answer;
     display.innerHTML = answer;
+    return;
 }
 
 const updateDisplay = function(arr) {
-    const display = document.querySelector('#displayNum');
+    //const display = document.querySelector('#displayNum');
     forOperators(arr);
     displayArr.push(arr);
     newArr = displayArr.join('');
 
-    if (counter % 2 !== 0){
+    //if (counter % 2 !== 0){
+      if (counter > 0){
         displayArr.pop();
         secondArr = displayArr.join('')
         display.innerHTML = newArr;
